@@ -1,11 +1,18 @@
 # 3D EKF SLAM
-
 <div align="center">
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/acelerado.gif"><br>
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/llmap.gif?raw=true"><br>
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/point.gif?raw=true"><br>
+	<table>
+	  <tr>
+	    <td>Experiment</td>
+	     <td>High Level reconstruction</td>
+	     <td>Point cloud reconstruction</td>
+	  </tr>
+	  <tr>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/acelerado.gif" width=270></td>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/llmap.gif?raw=true" width=270></td>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/point.gif?raw=true" width=270></td>
+	  </tr>
+	 </table>
 </div>
-
 
 Repository for my Master thesis:
 
@@ -23,26 +30,37 @@ An overview the algorithm is illustrated in figure below as a V-shaped process. 
 
 By doing that, the robot's pose is corrected and a global high level map can be generated using the parameterized feature. If the application chooses to carry the point cloud, it can create a point cloud or voxel-based maps as output.
 
-![wscheme](https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/overview.png) 
+<div align="center">
+  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/overview.png" width=1000><br>
+</div>
+ 
 
 ## Results:
 
 <div align="center">
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/experiment.jpg"><br>
+	<table>
+	  <tr>
+	    <td>Experiment</td>
+	     <td>High Level reconstruction</td>
+	     <td>Point cloud reconstruction</td>
+	  </tr>
+	  <tr>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/experiment.jpg" width=270></td>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/f3.png" width=270></td>
+	    <td><img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/f2.png" width=270></td>
+	  </tr>
+	 </table>
 </div>
-
-High Level Map             |  Point Cloud reconstruction
-:-------------------------:|:-------------------------:
-![](https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/f3.png)  |  ![](https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/f3.png)
 
 The odometry path error is the error related to the concatenation of commands sent to the robot and the estimated path error is obtained from comparing the proposed algorithm with the real path. Simulation results shows that in spite of the odometry error slowly increasing and reaching 7 m, the estimated trajectory error is always within bounds of 1 m. As a quantification tool, we can use the  Integral Absolute Error (IAE) criteria to measure the overall error during the whole SLAM process. Table shows the IAE criteria for this case.
 
 <div align="center">
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/errorstep.png"><br>
+  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/errorstep.png" width=600><br>
 </div>
 
-
+<center>
 |                      | IAE Criteria |
 |----------------------|--------------|
 | Odometry path error  | 49.82        |
 | Our estimation error | 304.28       |
+</center>
