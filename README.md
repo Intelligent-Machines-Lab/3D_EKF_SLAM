@@ -38,17 +38,34 @@ By doing that, the robot's pose is corrected and a global high level map can be 
 
 ## Results:
 
+### Simulation results
+
 Simulation results shows that in spite of the odometry error slowly increasing and reaching 7 m, the estimated trajectory error is always within bounds of 1 m. As a quantification tool, we can use the  Integral Absolute Error (IAE) criteria to measure the overall error during the whole SLAM process. Table shows the IAE criteria for this case.The odometry path error is the error related to the concatenation of commands sent to the robot and the estimated path error is obtained from comparing the proposed algorithm with the real path. 
 
-|                      | IAE Criteria |
-|----------------------|--------------|
-| Odometry path error  | 304.28       |
-| Our estimation error | 49.82        |
+<div align="center">
+	<table>
+	  <tr>
+	    <td></td>
+	     <td>IAE Criteria</td>
+	  </tr>
+	  <tr>
+	    <td>Odometry path error</td>
+	    <td>304.28</td>
+	  </tr>
+	  <tr>
+	    <td>Our estimation error</td>
+	    <td>49.82</td>
+	  </tr>
+	 </table>
+</div>
 
 <div align="center">
   <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/errorstep.png" width=600><br>
 </div>
 
+### Experimental results
+
+Below are some samples of reconstructed environment with a Intel RealSense RGBD camera. 
 
 <div align="center">
 	<table>
@@ -70,15 +87,24 @@ Simulation results shows that in spite of the odometry error slowly increasing a
 	 </table>
 </div>
 
-Point cloud reconstruction semi-colered by feature:
+## Why use this method?
 
-<div align="center">
-  <img src="https://github.com/Intelligent-Machines-Lab/3D_EKF_SLAM/blob/main/Videos/corredorpt2.png" width=800><br>
-</div>
+This algorithm uses a cylinder-and-plane combination to create a parameterized environment, and at the same time, correct its position. Different from point cloud registration techniques, the proposed algorithm does not match consecutive frames on each other. Actually, it interprets the scene and classifies each point cloud to an EKF feature. **Consequently, our solution is not only a basic SLAM technique but also a strategy for scene understanding and object segmentation.** 
+
+Though the point cloud can be used to reconstruct a colored realistic environment, the algorithm only requires the parameterized environment to work. Therefore, it can operate in machines with different memory configurations 
+
+### Main contributions
+
+The main contributions of this work can be summarize as follows:
+
+ - Use multiple abstraction layers to build a point cloud map on a landmark-based EKF-SLAM.
+ - Feature growth method for different views of observed planar or arbitrary objects. 
+ - Construction of a parameterized hybrid map based of simplification of the point cloud representation.
 
 ## Contact
 
 Author: [Leonardo Mariga](https://github.com/leomariga) 
+
 E-mail: leomariga@gmail.com
 
 Feel free to contact me.
