@@ -89,7 +89,7 @@ Below are some samples of reconstructed environment with a Intel RealSense RGBD 
 
 ## Why use this method?
 
-This algorithm uses a cylinder-and-plane combination to reconstruc a parameterized environment, and at the same time, correct the robot's pose. Different from point cloud registration techniques, the proposed algorithm does not match consecutive frames on each other. Actually, it interprets the scene and classifies each point cloud to an EKF feature. **Consequently, our solution is not only a basic SLAM technique but also a strategy for scene understanding and object segmentation.** 
+This algorithm uses a cylinder-and-plane combination to reconstruct a parameterized environment, and at the same time, correct the robot's pose. Different from point cloud registration techniques, the proposed algorithm does not match consecutive frames on each other. Actually, it interprets the scene and classifies each point cloud to an EKF feature. **Consequently, our solution is not only a basic SLAM technique but also a strategy for scene understanding and object segmentation.** 
 
 Though the point cloud can be used to reconstruct a colored realistic environment, the algorithm only requires the parameterized environment to work. Therefore, it can operate in machines with different memory configurations 
 
