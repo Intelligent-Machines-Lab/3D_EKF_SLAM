@@ -101,20 +101,6 @@ The main contributions of this work can be summarize as follows:
  - Feature growth method for different views of observed planar or arbitrary objects. 
  - Construction of a parameterized hybrid map based of simplification of the point cloud representation.
 
-## Cite this work
-
-```
-@mastersthesis{leomariga,
-author = {Mariga, Leonardo},
-year = {2021},
-month = {12},
-pages = {123},
-school = {Instituto tecnológico de aeronáutica},
-title = {Solving the simultaneous localization and 3D mapping problem in mobile robotics using multi-level parameterized representations},
-doi = {10.13140/RG.2.2.33836.33926}
-}
-```
-
 ## Contact
 
 Author: [Leonardo Mariga](https://github.com/leomariga) 
